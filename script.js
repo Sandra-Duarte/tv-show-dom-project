@@ -6,18 +6,18 @@ function setup() {
 
 function makePageForEpisodes(episodeList) {
   const rootElem = document.getElementById("root");
- // rootElem.textContent = `Got ${episodeList.length} episode(s)`;
- 
- //Add elements 
- getAllEpisodes().forEach((episode) =>{
-  const card = document.createElement("div");
-  card.classList.add("card");
-  const cardHeader = document.createElement("div");
-  cardHeader.classList.add("cardHeader");
-  const title = document.createElement("h3");
-  const season = document.createElement("h4");
-  const image = document.createElement("imag");
-  const summary = document.createElement("p");
+  //rootElem.textContent = `Got ${episodeList.length} episode(s)`;
+
+  getAllEpisodes().forEach((episode) => {
+    // Add elements
+    const card = document.createElement("div");
+    card.classList.add("card");
+    const cardHeader = document.createElement("div");
+    cardHeader.classList.add("cardHeader");
+    const title = document.createElement("h3");
+    const season = document.createElement("h4");
+    const image = document.createElement("img");
+    const summary = document.createElement("p");
     summary.classList.add("summary");
 
     // Add content to your elements 
@@ -36,19 +36,6 @@ function makePageForEpisodes(episodeList) {
     card.appendChild(image);
     card.appendChild(summary);
     rootElem.appendChild(card);
-
- });
-
-
+  });
 }
-
 window.onload = setup;
-
-
-/*let episodes;
-
-
-window.onload = () => {
-  episodes = getAllEpisodes()
-}*/
-
