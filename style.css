@@ -1,6 +1,6 @@
 *,
 body {
-  background-color: rgb(251, 253, 253);
+  background-color: rgb(240, 246, 246);
   line-height: 1.5;
   font-size: 1rem;
 }
@@ -38,7 +38,7 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: rgb(37, 37, 37);
+  color: black(238, 234, 234);
 }
 .header-title {
   display: flex;
@@ -100,7 +100,7 @@ p {
   }
 
   #root {
-    color: #19272e;
+    color: #172125;
     width: 90vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -111,14 +111,14 @@ p {
   }
 
   .main-container {
-    border: 2px solid rgb(171, 226, 43);
+    border: 2px solid rgb(189, 198, 198);
   }
   .card {
-    border: 3px solid blue;
+    border: 3px solid rgb(1, 17, 19);
   }
 
   .cardHeader {
-    border: 4px solid yellow;
+    border: 4px solid rgb(169, 169, 4);
   }
  .summary{
   text-align: justify;

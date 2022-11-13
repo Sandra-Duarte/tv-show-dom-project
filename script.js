@@ -1,14 +1,43 @@
+let allEpisodes;
+
 //You can edit ALL of the code here
 function setup() {
-  const allEpisodes = getAllEpisodes();
+  allEpisodes = getAllEpisodes();
   makePageForEpisodes(allEpisodes);
 }
 
+const search = document.getElementById("searchEpisode");
+const rootElem = document.getElementById("root");
+
+search.addEventListener("input",(element) => {
+  const value = element.target.value.toLowerCase();
+  //console.log(value)
+
+
+  const filterEpisodes = allEpisodes.filter((episode) =>
+       episode.name.toLowerCase().includes(value) ||
+        episode.summary.toLowerCase().includes(value)
+        );
+
+        console.log(filterEpisodes);
+
+
+        rootElem.innerHTML ="";
+        makePageForEpisodes(filterEpisodes); //////continue
+})
+
+
+
+
+
+
+
+
 function makePageForEpisodes(episodeList) {
-  const rootElem = document.getElementById("root");
+ 
   //rootElem.textContent = `Got ${episodeList.length} episode(s)`;
 
-  getAllEpisodes().forEach((episode) => {
+  episodeList.forEach((episode) => {
     // Add elements
     const card = document.createElement("div");
     card.classList.add("card");
